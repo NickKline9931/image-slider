@@ -79,3 +79,9 @@ backButton.addEventListener("click", lastImage);
 
 const nextButton = document.getElementById("nextbutton");
 nextButton.addEventListener("click", nextImage);
+
+circleOne.addEventListener("click", displayOne);
+circleTwo.addEventListener("click", displayTwo);
+circleThree.addEventListener("click", displayThree);
+circleFour.addEventListener("click", displayFour);
+circleFive.addEventListener("click", displayFive);
