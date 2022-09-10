@@ -1,23 +1,49 @@
-let photo = document.getElementById("photo");
+const photo = document.getElementById("photo");
+const circleButtons = document.getElementsByClassName("circle");
+const circleOne = document.getElementById("circleone");
+const circleTwo = document.getElementById("circletwo");
+const circleThree = document.getElementById("circlethree");
+const circleFour = document.getElementById("circlefour");
+const circleFive = document.getElementById("circlefive");
 
 function displayOne() {
     photo.src = "face1.svg";
+    Array.from(circleButtons).forEach(circle => {
+        circle.style.backgroundColor = "white";
+    });
+    circleOne.style.backgroundColor = "black";
 }
 
 function displayTwo() {
     photo.src = "face2.svg";
+    Array.from(circleButtons).forEach(circle => {
+        circle.style.backgroundColor = "white";
+    });
+    circleTwo.style.backgroundColor = "black";
 }
 
 function displayThree() {
     photo.src = "face3.svg";
+    Array.from(circleButtons).forEach(circle => {
+        circle.style.backgroundColor = "white";
+    });
+    circleThree.style.backgroundColor = "black";
 }
 
 function displayFour() {
     photo.src = "face4.svg";
+    Array.from(circleButtons).forEach(circle => {
+        circle.style.backgroundColor = "white";
+    });
+    circleFour.style.backgroundColor = "black";
 }
 
 function displayFive() {
     photo.src = "face5.svg";
+    Array.from(circleButtons).forEach(circle => {
+        circle.style.backgroundColor = "white";
+    });
+    circleFive.style.backgroundColor = "black";
 }
 
 function lastImage() {
@@ -48,8 +74,8 @@ function nextImage() {
 }
 }
 
-let backButton = document.getElementById("backbutton");
+const backButton = document.getElementById("backbutton");
 backButton.addEventListener("click", lastImage);
 
-let nextButton = document.getElementById("nextbutton");
+const nextButton = document.getElementById("nextbutton");
 nextButton.addEventListener("click", nextImage);
