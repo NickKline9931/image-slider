@@ -72,7 +72,10 @@ function nextImage() {
     } else if (photo.getAttribute('src') == "face5.svg") {
         displayOne();
 }
+window.setTimeout(nextImage, 5000);
 }
+
+window.setTimeout(nextImage, 5000);
 
 const backButton = document.getElementById("backbutton");
 backButton.addEventListener("click", lastImage);
