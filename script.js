@@ -12,6 +12,7 @@ function displayOne() {
         circle.style.backgroundColor = "white";
     });
     circleOne.style.backgroundColor = "black";
+    showNext();
 }
 
 function displayTwo() {
@@ -20,6 +21,7 @@ function displayTwo() {
         circle.style.backgroundColor = "white";
     });
     circleTwo.style.backgroundColor = "black";
+    showNext();
 }
 
 function displayThree() {
@@ -28,6 +30,7 @@ function displayThree() {
         circle.style.backgroundColor = "white";
     });
     circleThree.style.backgroundColor = "black";
+    showNext();
 }
 
 function displayFour() {
@@ -36,6 +39,7 @@ function displayFour() {
         circle.style.backgroundColor = "white";
     });
     circleFour.style.backgroundColor = "black";
+    showNext();
 }
 
 function displayFive() {
@@ -44,7 +48,10 @@ function displayFive() {
         circle.style.backgroundColor = "white";
     });
     circleFive.style.backgroundColor = "black";
+    showNext();
 }
+
+let myTimeout;
 
 function lastImage() {
     if (photo.getAttribute('src') == "face5.svg") {
@@ -58,6 +65,12 @@ function lastImage() {
     } else if (photo.getAttribute('src') == "face1.svg") {
         displayFive();
 }
+    showNext();
+}
+
+function showNext() {
+    clearTimeout(myTimeout);
+    myTimeout = setTimeout(nextImage, 5000);
 }
 
 function nextImage() {
@@ -72,11 +85,10 @@ function nextImage() {
     } else if (photo.getAttribute('src') == "face5.svg") {
         displayOne();
 }
-window.setTimeout(nextImage, 5000);
+    showNext();
 }
 
-window.setTimeout(nextImage, 5000);
-
+window.setTimeout(showNext, 0);
 const backButton = document.getElementById("backbutton");
 backButton.addEventListener("click", lastImage);
 
